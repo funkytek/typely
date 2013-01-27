@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/vendor/bootstrap.css" rel="stylesheet" />
+  <link href="css/vendor/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <div id="main"></div>
+    
+    <!-- shims -->
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/es5-shim.js"></script>
+    <script src="js/vendor/json3.js"></script>
+
+    <!-- dev -->
+    <script>__reloadServerUrl="ws://localhost:8001";</script>
+    <script type="text/javascript" src="//localhost:8001/__reload/client.js"></script> 
+    <!-- jade -->
+    <script src="https://raw.github.com/visionmedia/jade/master/runtime.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/require.min.js"></script>
+    <script src="js/vendor/dermis.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script src="js/vendor/jquery.jrumble.min.js"></script>
+    <script>
+      require({
+        baseUrl: ".",
+        packages: [
+          { name: "models", location: "js/models"},
+          { name: "app", location: "js" },
+          { name: "routes", location: "js/routes" },
+          { name: "vendor", location: "js/vendor" }
+         ]
+      },[
+       'app/main'
+     ]);
+
+    </script>
+
+  </body>
+</html>
