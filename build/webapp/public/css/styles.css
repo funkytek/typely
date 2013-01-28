@@ -13,6 +13,11 @@ body {
   font-size: 48px;
   font-weight: bold;
 }
+#current {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00f;
+}
 #sentence {
   z-index: 0;
   position: absolute;
